@@ -5,14 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss src/css/styles.css -o dist/styles.css"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "autoprefixer": "^10.4.17",
-    "postcss-cli": "^11.0.0",
-    "tailwindcss": "^3.4.1"
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "rollup": "^2.79.1",
+    "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^7.1.6",
+    "rollup-plugin-terser": "^7.0.2",
+    "svelte": "^4.2.10"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup-plugin-serve": "^1.1.1"
   }
 }
